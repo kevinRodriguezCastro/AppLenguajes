@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
     private ListView lista;
@@ -50,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void añadirLenguaje(View v){
         lenguajes.add(new Lenguaje(lenguaje.getText().toString()));
+        lenguajes.sort(new Comparator<Lenguaje>() {
+            public int compare(Lenguaje obj1, Lenguaje obj2) {
+                return obj1.getNombre().compareTo(obj2.getNombre());
+            }
+        });
         adapter.setLenguajes(lenguajes);
         adapter.notifyDataSetChanged();
     }

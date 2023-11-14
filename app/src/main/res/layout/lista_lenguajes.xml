@@ -17,7 +17,7 @@
         android:id="@+id/btnBorrar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/trash_24">
+        android:background="@drawable/baseline_delete_24">
 
     </ImageButton>
 </LinearLayout>
